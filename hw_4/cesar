@@ -1,0 +1,42 @@
+Во-первых, сохраните names.txt в кодировке utf-8 без BOM. Во-вторых, считанные из файла строки надо очистить от символа переноса строки:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+delimiter = ' \\ '
+names = dict(tuple(line.strip()
+                       .replace('"', '')
+                       .split(delimiter))
+               for line in open('names.txt', encoding='utf-8')
+               if line.count(delimiter) == 1)
+
+for file in glob.glob('*.jpg'):
+    name, ext = os.path.splitext(file)
+    if name in names:
+        counter = 0
+        while counter < 10:
+            try:
+                n = ' {}'.format(counter) if counter else ''
+                os.rename(file, names[name] + n + ext)
+            except FileExistsError:
+                counter += 1
+                continue
+            else:
+                break

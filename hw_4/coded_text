@@ -1,0 +1,42 @@
+Ес-тзуеюш, фсшугрлхз qdphv.waw е нсжлусенз xwi-1 дзк ERP. Ес-ехсуюш, фълхгррюз лк чгмог фхуснл ргжс сълфхлхя сх флпесог тзузрсфг фхуснл:
+
+4
+5
+6
+7
+8
+9
+0
+1
+2
+43
+44
+45
+46
+47
+48
+49
+40
+41
+42
+53
+gholplwhu = ' \\ '
+qdphv = glfw(wxsoh(olqh.vwuls()
+                       .uhsodfh('"', '')
+                       .vsolw(gholplwhu))
+               iru olqh lq rshq('qdphv.waw', hqfrglqj='xwi-1')
+               li olqh.frxqw(gholplwhu) == 4)
+
+iru iloh lq jore.jore('*.msj'):
+    qdph, haw = rv.sdwk.vsolwhaw(iloh)
+    li qdph lq qdphv:
+        frxqwhu = 3
+        zkloh frxqwhu < 43:
+            wub:
+                q = ' {}'.irupdw(frxqwhu) li frxqwhu hovh ''
+                rv.uhqdph(iloh, qdphv[qdph] + q + haw)
+            hafhsw IlohHalvwvHuuru:
+                frxqwhu += 4
+                frqwlqxh
+            hovh:
+                euhdn
